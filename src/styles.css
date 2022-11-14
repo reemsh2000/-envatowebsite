@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/primeicons/primeicons.css";
+@import "../node_modules/primeng/resources/themes/saga-green/theme.css";
+@import "../node_modules/primeng/resources/primeng.min.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  --nav: rgb(252, 252, 252);
+  --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+input,
+.p-dropdown {
+  width: 250px !important;
+}

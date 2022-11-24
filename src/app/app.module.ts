@@ -7,13 +7,15 @@ import { GMapModule } from 'primeng/gmap';
 import { ToastModule } from 'primeng/toast';
 import { DialogModule } from 'primeng/dialog';
 import { CheckboxModule } from 'primeng/checkbox';
+import { CardModule } from 'primeng/card';
 
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
+import { NavComponent } from './common/nav/nav.component';
 import { MapComponent } from './map/map.component';
 import { FormsModule } from '@angular/forms';
 import { CarouselComponent } from './carousel/carousel.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { CardComponent } from './common/card/card.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     MapComponent,
     CarouselComponent,
     WelcomeComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     FormsModule,
     BrowserAnimationsModule,
     CarouselModule,
+    CardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

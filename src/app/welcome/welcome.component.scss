@@ -1,0 +1,24 @@
+.welcome_cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .name {
+    color: #00c5f6 !important;
+  }
+
+  .welcoming {
+    color: var(--font);
+    margin: 10px 0;
+  }
+  .cards {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .item {
+      width: 32%;
+      display: flex;
+      align-items: center;
+      background-color: aquamarine;
+    }
+  }
+}

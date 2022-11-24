@@ -1,1 +1,16 @@
-<p>welcome works!</p>
+<div class="welcome_cont">
+  <h2 class="title">
+    WELCOME
+    TO
+    <span class="name">BIZREVIEW</span>
+  </h2>
+  <p class="welcoming">
+    Why you should join a growing network of enthusiastists
+  </p>
+  <div class="cards">
+    <div class="item" *ngFor="let item of items">
+        <app-card [item]="item"></app-card>
+      </div>
+  </div>
+
+</div>

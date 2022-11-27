@@ -12,13 +12,34 @@
   }
   .cards {
     display: flex;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     .item {
-      width: 32%;
-      display: flex;
-      align-items: center;
-      background-color: aquamarine;
+      width: 25%;
+      margin: 15px 0;
+      box-shadow: var(--shadow);
     }
   }
 }
+@media (max-width: 900px) {
+  .welcome_cont {
+    .cards {
+      .item {
+        width: 40%;
+        background-color: #00c5f6;
+      }
+    }
+  }
+}
+@media (max-width: 520px) {
+  .welcome_cont {
+    .cards {
+      .item {
+        width: 70%;
+        background-color: #00c5f6;
+      }
+    }
+  }
+}
+

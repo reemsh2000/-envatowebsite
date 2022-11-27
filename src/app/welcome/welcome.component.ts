@@ -13,7 +13,7 @@ export class WelcomeComponent implements OnInit {
     },
     {
       pic: 'http://bizreviewd8.symphonythemes.net/sites/bizreviewd8/files/images/9.resized.png',
-      txt: 'Review and recommend places that you visited. Share your feelings, your experiences and earn praises.',
+      txt: 'Review and recommend places that you visited. Share your feelings, your experiences.',
     },
     {
       pic: 'http://bizreviewd8.symphonythemes.net/sites/bizreviewd8/files/images/11.resized.png',

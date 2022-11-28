@@ -19,13 +19,16 @@ export class DataviewComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.productService.getProducts().then((data) => (this.products = data));
+    this.getProducts();
     this.sortOptions = [
       { label: 'Price High to Low', value: '!price' },
       { label: 'Price Low to High', value: 'price' },
     ];
 
     this.primengConfig.ripple = true;
+  }
+  getProducts() {
+    this.productService.getProducts().then((data) => (this.products = data));
   }
 
   onSortChange(event: any) {
@@ -38,5 +41,13 @@ export class DataviewComponent implements OnInit {
       this.sortOrder = 1;
       this.sortField = value;
     }
+  }
+  filter(event: any) {
+    const search = event.target.value;
+    !search
+      ? this.getProducts()
+      : (this.products = this.products.filter((item: any) =>
+          item.name.toLowerCase().startsWith(search.toLowerCase())
+        ));
   }
 }

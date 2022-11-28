@@ -16,6 +16,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { RatingModule } from 'primeng/rating';
 import { RippleModule } from 'primeng/ripple';
+import { TimelineModule } from 'primeng/timeline';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './common/nav/nav.component';
@@ -26,6 +27,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CardComponent } from './common/card/card.component';
 import { DataviewComponent } from './dataview/dataview.component';
 import { ProductService } from './dataview/product.service';
+import { TimelineComponent } from './timeline/timeline.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +37,7 @@ import { ProductService } from './dataview/product.service';
     WelcomeComponent,
     CardComponent,
     DataviewComponent,
+    TimelineComponent,
   ],
   imports: [
     HttpClientModule,
@@ -54,6 +57,7 @@ import { ProductService } from './dataview/product.service';
     RatingModule,
     DropdownModule,
     RippleModule,
+    TimelineModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent],

@@ -28,6 +28,7 @@ import { CardComponent } from './common/card/card.component';
 import { DataviewComponent } from './dataview/dataview.component';
 import { ProductService } from './dataview/product.service';
 import { TimelineComponent } from './timeline/timeline.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { TimelineComponent } from './timeline/timeline.component';
     CardComponent,
     DataviewComponent,
     TimelineComponent,
+    FooterComponent,
   ],
   imports: [
     HttpClientModule,

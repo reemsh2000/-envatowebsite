@@ -79,9 +79,9 @@
             <div class="product-description">{{ product.description }}</div>
             <p-rating
               [ngModel]="product.rating"
-              [readonly]="true"
               [cancel]="false"
             ></p-rating>
+            <!-- for read only[readonly]="true" -->
           </div>
           <div class="product-grid-item-bottom">
             <span class="product-price">${{ product.price }}</span>

@@ -19,14 +19,15 @@
         ></p-dropdown>
         <span class="p-input-icon-left mb-2 md:mb-0">
           <i class="pi pi-search"></i>
-          <input type="search" pInputText placeholder="Search by Name" />
-          <!-- (input)="dv.filter($event.target.value)" -->
+          <input type="search" pInputText placeholder="Search by Name" 
+          (input)="filter($event)" 
+          />
         </span>
         <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
       </div>
     </ng-template>
     <ng-template let-product pTemplate="listItem">
-      <div class="p-col-12">
+      <div class="p-col-12 md:col-12">
         <div class="product-list-item">
           <div class="product-list-detail">
             <div class="product-name">{{ product.name }}</div>

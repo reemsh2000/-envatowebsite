@@ -17,6 +17,11 @@ import { InputTextModule } from 'primeng/inputtext';
 import { RatingModule } from 'primeng/rating';
 import { RippleModule } from 'primeng/ripple';
 import { TimelineModule } from 'primeng/timeline';
+import { TableModule } from 'primeng/table';
+import { ContextMenuModule } from 'primeng/contextmenu';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { SliderModule } from 'primeng/slider';
+import { MultiSelectModule } from 'primeng/multiselect';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './common/nav/nav.component';
@@ -29,6 +34,8 @@ import { DataviewComponent } from './dataview/dataview.component';
 import { ProductService } from './dataview/product.service';
 import { TimelineComponent } from './timeline/timeline.component';
 import { FooterComponent } from './footer/footer.component';
+import { TableComponent } from './table/table.component';
+import { CustomerService } from './table/customer.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +47,7 @@ import { FooterComponent } from './footer/footer.component';
     DataviewComponent,
     TimelineComponent,
     FooterComponent,
+    TableComponent,
   ],
   imports: [
     HttpClientModule,
@@ -59,9 +67,14 @@ import { FooterComponent } from './footer/footer.component';
     RatingModule,
     DropdownModule,
     RippleModule,
-    TimelineModule
+    TimelineModule,
+    TableModule,
+    ContextMenuModule,
+    ProgressBarModule,
+    SliderModule,
+    MultiSelectModule,
   ],
-  providers: [ProductService],
+  providers: [ProductService, CustomerService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

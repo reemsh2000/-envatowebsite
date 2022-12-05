@@ -53,7 +53,6 @@ export class TableComponent implements OnInit {
   }
   filterGlobal(event: any) {
     let searchedWord = event.target.value.toLowerCase();
-    console.log({ searchedWord });
     if (!searchedWord) {
       return this.getCustomers();
     }

@@ -21,10 +21,7 @@ export class TableComponent implements OnInit {
   constructor(private customerService: CustomerService) {}
 
   ngOnInit() {
-    this.customerService.getCustomersLarge().then((customers) => {
-      this.customers = customers;
-      this.loading = false;
-    });
+    this.getCustomers();
 
     this.representatives = [
       { name: 'Amy Elsner', image: 'amyelsner.png' },
@@ -47,5 +44,26 @@ export class TableComponent implements OnInit {
       { label: 'Renewal', value: 'renewal' },
       { label: 'Proposal', value: 'proposal' },
     ];
+  }
+  getCustomers(): any {
+    this.customerService.getCustomersLarge().then((customers) => {
+      this.customers = customers;
+      this.loading = false;
+    });
+  }
+  filterGlobal(event: any) {
+    let searchedWord = event.target.value.toLowerCase();
+    console.log({ searchedWord });
+    if (!searchedWord) {
+      return this.getCustomers();
+    }
+    this.customers = this.customers.filter((customer: any) => {
+      return (
+        customer.name.toLowerCase()?.includes(searchedWord) ||
+        customer.country.name.toLowerCase().includes(searchedWord) ||
+        customer.representative.name.toLowerCase()?.includes(searchedWord) ||
+        customer.status.toLowerCase().includes(searchedWord)
+      );
+    });
   }
 }

@@ -20,6 +20,12 @@
   <ng-template pTemplate="caption">
     <div class="p-d-flex">
       <span class="p-input-icon-left p-ml-auto">
+        <input
+          pInputText
+          type="text"
+          (input)="filterGlobal($event)"
+          placeholder="Search keyword"
+        />
         <i class="pi pi-search"></i>
       </span>
     </div>

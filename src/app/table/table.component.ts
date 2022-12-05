@@ -24,10 +24,6 @@ export class TableComponent implements OnInit {
     this.customerService.getCustomersLarge().then((customers) => {
       this.customers = customers;
       this.loading = false;
-
-      this.customers.forEach(
-        (customer: any) => (customer.date = new Date(customer.date))
-      );
     });
 
     this.representatives = [
